@@ -1,3 +1,4 @@
+import Photo from '@/components/Photo';
 import Social from '@/components/Social';
 import { Button } from '@/components/ui/button';
 import { FiDownload } from 'react-icons/fi';
@@ -18,7 +19,6 @@ export default function Home() {
               field and proficient in various programming languages and techs
             </p>
           </div>
-
           {/* download cv and social*/}
           <div className='flex flex-col xl:flex-row items-center gap-8'>
             <Button variant='outline' className='hidden xl:flex items-center gap-2'>
@@ -29,9 +29,9 @@ export default function Home() {
               <Social containerStyles='flex gap-6' iconStyles='' />
             </div>
           </div>
-
-          {/* photo */}
-          <div>photo</div>
+          <div>
+            <Photo />
+          </div>
         </div>
       </div>
     </section>
