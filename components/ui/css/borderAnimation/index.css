@@ -1,42 +1,7 @@
-/* .container {
-  position: relative;
-  border-radius: 16px;
-  background-color: #000;
-  overflow: hidden;
-}
-
-.profile-photo::before {
-  content: '';
-  position: absolute;
-  height: 550px;
-  width: 550px;
-  background-image: conic-gradient(transparent, transparent, transparent, #fff);
-}
-
-.profile-photo.active:before {
-  animation: rotate 4s linear infinite;
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.profile-photo .overlay {
-  position: absolute;
-  height: 440px;
-  width: 340px;
-  border-radius: 12px;
-  background-color: var(--color-background);
-} */
-
 .profile-photo {
   position: relative;
   border-radius: 50%; /* Changed to 50% for circular shape */
-  background-color: #000;
+  background-color: var(--color-background);
   overflow: hidden;
 }
 
