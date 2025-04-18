@@ -71,7 +71,7 @@ const ServiceCard = ({ num, title, description, href }) => {
 
         <motion.Link
           href={href}
-          className='w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent-default transition-all duration-500 flex justify-center items-center hover:-rotate-45 '
+          className='w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent-default transition-all duration-300 flex justify-center items-center hover:-rotate-45 '
           initial={{ clipPath: 'inset(0 100% 0 0)' }}
           animate={{
             clipPath: isHovered ? 'inset(0 0% 0 0)' : 'inset(0 100% 0 0)',
