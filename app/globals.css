@@ -140,7 +140,20 @@
 @theme {
   --color-accent-default: #53ecaf;
   --color-accent-hover: #00e187;
-  /* .text-outline-hoverr {
-    -webkit-text-stroke: 2px var(--color-accent-default);
-  } */
+}
+
+@utility container {
+  center: true;
+
+  @variant sm {
+    padding-inline: 20px;
+  }
+
+  @variant lg {
+    padding-inline: 80px;
+  }
+
+  @variant xl {
+    padding-inline: 120px;
+  }
 }
