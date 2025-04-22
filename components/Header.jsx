@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 // components
-import Nav from './Nav';
+import { Nav } from './Nav';
 import { Button } from './ui/button';
 import MobileNav from './MobileNav';
 

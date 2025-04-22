@@ -3,6 +3,7 @@ import { BsArrowDownRight } from 'react-icons/bs';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+const MotionLink = motion(Link);
 
 const services = [
   {
@@ -69,20 +70,21 @@ const ServiceCard = ({ num, title, description, href }) => {
           {num}
         </div>
 
-        <motion.Link
+        <MotionLink
           href={href}
-          className='w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent-default transition-all duration-300 flex justify-center items-center hover:-rotate-45 '
-          initial={{ clipPath: 'inset(0 100% 0 0)' }}
+          className='w-[70px] h-[70px] rounded-full bg-white flex justify-center items-center'
+          initial={{ backgroundColor: '#ffffff' }}
           animate={{
-            clipPath: isHovered ? 'inset(0 0% 0 0)' : 'inset(0 100% 0 0)',
+            backgroundColor: isHovered ? '#53ecaf' : '#ffffff',
+            rotate: isHovered ? -45 : 0,
           }}
           transition={{
-            duration: 0.6,
+            duration: 0.3,
             ease: 'easeInOut',
           }}
         >
           <BsArrowDownRight className='text-primary text-3xl group-hover:text-white group-hover:font-bold' />
-        </motion.Link>
+        </MotionLink>
       </div>
 
       {/* Title with animated fill effect */}
@@ -97,7 +99,7 @@ const ServiceCard = ({ num, title, description, href }) => {
             clipPath: isHovered ? 'inset(0 0% 0 0)' : 'inset(0 100% 0 0)',
           }}
           transition={{
-            duration: 0.6,
+            duration: 0.3,
             ease: 'easeInOut',
           }}
         >
