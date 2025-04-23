@@ -1,12 +1,19 @@
 'use client';
 
-import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaPython, Faty } from 'react-icons/fa';
-import { SiTailwindcss, SiNextdotjs, SiRedux, SiStyledcomponents } from 'react-icons/si';
-import { BiLogoTypescript } from 'react-icons/bi';
+import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaPython, Fa } from 'react-icons/fa';
+import {
+  SiTailwindcss,
+  SiNextdotjs,
+  SiRedux,
+  SiStyledcomponents,
+  SiAmazondynamodb,
+} from 'react-icons/si';
+import { BiLogoTypescript, BiLogoPostgresql, BiLogoVuejs } from 'react-icons/bi';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { motion } from 'framer-motion';
+import QdrantIcon from './qdrantIcon';
 
 const about = {
   title: 'About Me',
@@ -108,6 +115,10 @@ const skills = {
       name: 'next.js',
     },
     {
+      icon: <BiLogoVuejs />,
+      name: 'vue.js',
+    },
+    {
       icon: <FaNodeJs />,
       name: 'node.js',
     },
@@ -131,6 +142,18 @@ const skills = {
       icon: <FaPython />,
       name: 'python',
     },
+    {
+      icon: <BiLogoPostgresql />,
+      name: 'PostgreSQL',
+    },
+    {
+      icon: <QdrantIcon />,
+      name: 'Qdrant vector db',
+    },
+    {
+      icon: <SiAmazondynamodb />,
+      name: 'DynamoDB',
+    },
   ],
 };
 
@@ -140,13 +163,13 @@ const Resume = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: 'easeIn' },
+        transition: { delay: 2, duration: 0.1, ease: 'easeIn' },
       }}
       className='min-h-[80vh] flex items-center justify-center py-12 xl:py-0'
     >
       <div className='container mx-auto'>
-        <Tabs defaultValue='experience' className='flex flex-col xl:flex-row gap-[60px] '>
-          <TabsList className='flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 '>
+        <Tabs defaultValue='experience' className='flex flex-col xl:flex-row gap-[60px]'>
+          <TabsList className='flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6'>
             <TabsTrigger value='experience'>Experience</TabsTrigger>
             <TabsTrigger value='education'>Education</TabsTrigger>
             <TabsTrigger value='skills'>Skills</TabsTrigger>
@@ -162,8 +185,8 @@ const Resume = () => {
                 <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>
                   {epxerience.description}
                 </p>
-                <ScrollArea className='max-h-[400px]'>
-                  <ul className='flex flex-col lg:grid-cols-1 gap-[30px]'>
+                <ScrollArea className='h-[400px]'>
+                  <ul className='grid grid-cols-1 flex-col lg:grid-cols-2 gap-[30px]'>
                     {epxerience.items.map((item, index) => {
                       return (
                         <li

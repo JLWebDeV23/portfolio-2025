@@ -7,11 +7,11 @@ const stats = [
     text: 'Years of experience',
   },
   {
-    num: 10,
+    num: 15,
     text: 'Project completed',
   },
   {
-    num: 8,
+    num: 16,
     text: 'Technologies mastered',
   },
   {
@@ -37,6 +37,7 @@ const Stats = () => {
                   delay={2}
                   className='text-4xl xl:text-6xl font-extrabold'
                 />
+                <span></span>
                 <p
                   className={`${
                     item.text.length < 15 ? 'max-w-[100px]' : 'max-w-[150px]'

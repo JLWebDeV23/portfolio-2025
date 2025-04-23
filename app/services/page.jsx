@@ -3,7 +3,7 @@ import { BsArrowDownRight } from 'react-icons/bs';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-const MotionLink = motion(Link);
+const MotionLink = motion.create(Link);
 
 const services = [
   {
@@ -36,7 +36,7 @@ const Services = () => {
         <motion.div
           className='grid grid-cols-1 md:grid-cols-2 gap-[60px]'
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: 'easeIn' } }}
+          animate={{ opacity: 1, transition: { delay: 2, duration: 0.1, ease: 'easeIn' } }}
         >
           {services.map((service, index) => {
             return (

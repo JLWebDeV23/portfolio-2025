@@ -85,7 +85,7 @@ const Work = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: 'easeIn' } }}
+      animate={{ opacity: 1, transition: { delay: 2, duration: 0.1, ease: 'easeIn' } }}
       className='min-h-[80vh] flex flex-col justify-center py-12: xl:px-20 sm:px-5'
     >
       <div className='container max-auto'>
@@ -115,7 +115,7 @@ const Work = () => {
                 })}
               </ul>
               {/* border */}
-              <div className='border border-white/20'></div>
+              <div className='border border-white/20' />
               {/* buttons */}
               <div className='flex gap-4'>
                 {/* live projects button */}
