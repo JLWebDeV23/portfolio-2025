@@ -14,65 +14,102 @@ import Image from 'next/image';
 const projects = [
   {
     num: '01',
-    categroy: 'frontend',
+    categroy: 'LLM | AI | frontend',
     title: 'project 1',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.',
-    stack: [{ name: 'HTML 5' }, { name: 'CSS 3' }, { name: 'Javascript' }],
-    image: '/assets/work/thumb1.png', //TODO: add image
+    description:
+      'This app features three key sections: a Tree Tokenizer that visualizes how OpenAI LLMs use Top-K sampling to generate the next token, a RAG module for retrieving and grounding responses from external sources, and a Multi-Model Comparison tool to analyze outputs from different models and understand the impact of system messages.',
+    stack: [
+      { name: 'Next.js' },
+      { name: 'Tailwind CSS' },
+      { name: 'HTML 5' },
+      { name: 'Typescript' },
+      { name: 'Qdrant' },
+      { name: 'APIs' },
+    ],
+    image: '/assets/work/chanado.png',
     live: '',
     github: '',
   },
   {
     num: '02',
-    categroy: 'frontend',
-    title: 'project 2',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.',
-    stack: [{ name: 'HTML 5' }, { name: 'CSS 3' }, { name: 'Javascript' }],
-    image: '/assets/work/thumb1.png', //TODO: add image
+    categroy: 'backend',
+    title: 'project 3',
+    description:
+      'A POC for voice recognition and transcription with a focus on real-time processing with AI powered pre-trained model from SpeechBrain and Huggingface and integration with a PostgreSQL database for storage and retrieval utilising cosine similarity search.',
+    stack: [{ name: 'Node.js' }, { name: 'Qdrant' }, { name: 'Timescale/PostgreSQL' }],
+    image: '/assets/work/voiceRecognition.webp',
     live: '',
     github: '',
   },
   {
     num: '03',
-    categroy: 'frontend',
-    title: 'project 3',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.',
-    stack: [{ name: 'HTML 5' }, { name: 'CSS 3' }, { name: 'Javascript' }],
-    image: '/assets/work/thumb1.png', //TODO: add image
+    categroy: 'cloud | frontend',
+    title: 'project 2',
+    description:
+      'A Vue.js to-do list app that leverages multiple AWS microservices for scalable, cloud-powered functionality with user administration.',
+    stack: [
+      { name: 'Vue.js' },
+      { name: 'Jwt' },
+      { name: 'Javascript' },
+      { name: 'Axios' },
+      { name: 'APIGateway' },
+      { name: 'DynamoDB' },
+      { name: 'S3' },
+      { name: 'Lambda' },
+      { name: 'CloudWatch' },
+      { name: 'Cognito' },
+      { name: 'IAM' },
+    ],
+    image: '/assets/work/vue.jpeg',
     live: '',
     github: '',
   },
   {
     num: '04',
     categroy: 'frontend',
-    title: 'project 4',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.',
+    title: 'project 3',
+    description: 'A streaming platform that allows users to watch and share videos.',
     stack: [{ name: 'HTML 5' }, { name: 'CSS 3' }, { name: 'Javascript' }],
-    image: '/assets/work/thumb1.png', //TODO: add image
+    image: '/assets/work/aniHub.png',
     live: '',
     github: '',
   },
+
   {
     num: '05',
     categroy: 'frontend',
-    title: 'project 5',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.',
+    title: 'project 3',
+    description:
+      'A restaurant website that allows users to view the menu, stories, backgrounds and make reservations.',
     stack: [{ name: 'HTML 5' }, { name: 'CSS 3' }, { name: 'Javascript' }],
-    image: '/assets/work/thumb1.png', //TODO: add image
+    image: '/assets/work/restaurant.png',
+    live: '',
+    github: '',
+  },
+
+  {
+    num: '06',
+    categroy: 'frontend',
+    title: 'project 4',
+    description: 'A new blog platform that allows users to create and share their own blogs.',
+    stack: [{ name: 'HTML 5' }, { name: 'CSS 3' }, { name: 'Javascript' }],
+    image: '/assets/work/gpt3.png',
     live: '',
     github: '',
   },
   {
-    num: '01',
+    num: '07',
     categroy: 'frontend',
-    title: 'project 1',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.',
+    title: 'project 5',
+    description:
+      'A customizable e-commerce platform that allows users to create and manage their own online stores.',
     stack: [{ name: 'HTML 5' }, { name: 'CSS 3' }, { name: 'Javascript' }],
-    image: '/assets/work/thumb1.png', //TODO: add image
+    image: '/assets/work/shopper.png',
     live: '',
     github: '',
   },
 ];
+
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
 
@@ -103,7 +140,7 @@ const Work = () => {
               {/* project description */}
               <p className='text-white/60'>{project.description}</p>
               {/* stack */}
-              <ul className='flex gap-4i'>
+              <ul className='flex gap-4 flex-wrap'>
                 {project.stack.map((item, index) => {
                   return (
                     <li key={index} className='text-xl text-accent-default'>
@@ -162,7 +199,7 @@ const Work = () => {
                           src={project.image}
                           alt='project image'
                           fill
-                          className='object-cover rounded-md'
+                          className='object-fit rounded-md'
                         />
                       </div>
                     </div>

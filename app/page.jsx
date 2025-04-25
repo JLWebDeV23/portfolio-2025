@@ -46,9 +46,9 @@ export default function Home() {
         </div>
       </div>
       <Stats />
+      <Work />
       <Services />
       <Resume />
-      <Work />
       <Contact />
     </section>
   );
