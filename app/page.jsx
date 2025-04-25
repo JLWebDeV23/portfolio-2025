@@ -40,9 +40,7 @@ export default function Home() {
           </div>
           {/* download cv and social*/}
 
-          <div>
-            <Photo />
-          </div>
+          <Photo />
         </div>
       </div>
       <Stats />

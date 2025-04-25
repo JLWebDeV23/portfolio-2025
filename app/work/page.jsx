@@ -11,6 +11,8 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import Link from 'next/link';
 import Image from 'next/image';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const projects = [
   {
     num: '01',
@@ -31,7 +33,6 @@ const projects = [
     github: 'https://github.com/JLWebDeV23/embeddings-playground',
   },
   {
-    num: '02',
     categroy: 'backend',
     title: 'project 3',
     description:
@@ -198,7 +199,7 @@ const Work = () => {
                       {/* image */}
                       <div className='relative w-full h-full'>
                         <Image
-                          src={project.image}
+                          src={`${basePath}${project.image}`}
                           alt='project image'
                           fill
                           className='object-fit rounded-md'

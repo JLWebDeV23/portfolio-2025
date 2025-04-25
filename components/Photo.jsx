@@ -3,6 +3,7 @@ import './ui/css/borderAnimation/index.css';
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const Photo = () => {
   return (
@@ -15,10 +16,11 @@ const Photo = () => {
         <div className='absolute inset-0 z-15'>
           <div className='w-full h-full scale-[1] blur-xl'>
             <Image
-              src='/assets/profile_photo.png'
+              src={`${basePath}/assets/profile_photo.png`}
               fill
               alt='Blurry Edge Layer'
               className='object-contain rounded-full'
+              unoptimized
             />
           </div>
         </div>
@@ -26,12 +28,13 @@ const Photo = () => {
         {/* Main image layer */}
         <motion.div className='relative w-full h-full z-20'>
           <Image
-            src='/assets/profile_photo.png'
+            src={`${basePath}/assets/profile_photo.png`}
             priority
             quality={100}
             fill
             alt='Profile Photo'
             className='object-contain rounded-full m-2'
+            unoptimized
           />
         </motion.div>
       </div>
