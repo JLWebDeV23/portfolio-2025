@@ -28,7 +28,7 @@ const projects = [
     ],
     image: '/assets/work/chanado.png',
     live: '',
-    github: '',
+    github: 'https://github.com/JLWebDeV23/embeddings-playground',
   },
   {
     num: '02',
@@ -39,12 +39,12 @@ const projects = [
     stack: [{ name: 'Node.js' }, { name: 'Qdrant' }, { name: 'Timescale/PostgreSQL' }],
     image: '/assets/work/voiceRecognition.webp',
     live: '',
-    github: '',
+    github: 'https://github.com/JLWebDeV23/speaker-recognition',
   },
   {
     num: '03',
     categroy: 'cloud | frontend',
-    title: 'project 2',
+    title: 'project 4',
     description:
       'A Vue.js to-do list app that leverages multiple AWS microservices for scalable, cloud-powered functionality with user administration.',
     stack: [
@@ -62,29 +62,29 @@ const projects = [
     ],
     image: '/assets/work/vue.jpeg',
     live: '',
-    github: '',
+    github: 'https://github.com/JLWebDeV23/todo-app',
   },
   {
     num: '04',
     categroy: 'frontend',
-    title: 'project 3',
+    title: 'project 5',
     description: 'A streaming platform that allows users to watch and share videos.',
     stack: [{ name: 'HTML 5' }, { name: 'CSS 3' }, { name: 'Javascript' }],
     image: '/assets/work/aniHub.png',
     live: '',
-    github: '',
+    github: 'https://github.com/JLWebDeV23/AniHub.jo',
   },
 
   {
     num: '05',
     categroy: 'frontend',
-    title: 'project 3',
+    title: 'project 6',
     description:
       'A restaurant website that allows users to view the menu, stories, backgrounds and make reservations.',
     stack: [{ name: 'HTML 5' }, { name: 'CSS 3' }, { name: 'Javascript' }],
     image: '/assets/work/restaurant.png',
     live: '',
-    github: '',
+    github: 'https://github.com/JLWebDeV23/Joey-Restaurant',
   },
 
   {
@@ -94,19 +94,19 @@ const projects = [
     description: 'A new blog platform that allows users to create and share their own blogs.',
     stack: [{ name: 'HTML 5' }, { name: 'CSS 3' }, { name: 'Javascript' }],
     image: '/assets/work/gpt3.png',
-    live: '',
+    live: 'https://github.com/JLWebDeV23/GPT-3',
     github: '',
   },
   {
     num: '07',
     categroy: 'frontend',
-    title: 'project 5',
+    title: 'project 7',
     description:
       'A customizable e-commerce platform that allows users to create and manage their own online stores.',
     stack: [{ name: 'HTML 5' }, { name: 'CSS 3' }, { name: 'Javascript' }],
     image: '/assets/work/shopper.png',
     live: '',
-    github: '',
+    github: 'https://github.com/JLWebDeV23/Shopper',
   },
 ];
 
@@ -123,7 +123,7 @@ const Work = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 2, duration: 0.1, ease: 'easeIn' } }}
-      className='min-h-[80vh] flex flex-col justify-center py-12: xl:px-20 sm:px-5'
+      className='min-h-[80vh] flex items-center justify-center py-12 xl:py-0'
     >
       <div className='container max-auto'>
         <div className='flex flex-col xl:flex-row xl:gap-[30px]'>
@@ -156,16 +156,18 @@ const Work = () => {
               {/* buttons */}
               <div className='flex gap-4'>
                 {/* live projects button */}
-                <Link href={project.live}>
-                  <TooltipProvider>
-                    <Tooltip>
-                      <TooltipTrigger className='w-[70px] h-[70px] bg-white/5 rounded-full flex items-center justify-center group'>
-                        <BsArrowUpRight className='text-white text-3xl group-hover:text-accent-default' />
-                      </TooltipTrigger>
-                      <TooltipContent>Live projects</TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
+                {project.live.length > 0 && (
+                  <Link href={project.live}>
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger className='w-[70px] h-[70px] bg-white/5 rounded-full flex items-center justify-center group'>
+                          <BsArrowUpRight className='text-white text-3xl group-hover:text-accent-default' />
+                        </TooltipTrigger>
+                        <TooltipContent>Live projects</TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                )}
                 {/* github projects button */}
                 <Link href={project.github}>
                   <TooltipProvider>
