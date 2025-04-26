@@ -16,7 +16,8 @@ const Photo = () => {
         <div className='absolute inset-0 z-15'>
           <div className='w-full h-full scale-[1] blur-xl'>
             <Image
-              src={`${basePath}/assets/profile_photo.png`}
+              // src={`${basePath}/assets/profile_photo.png`}
+              src={`/assets/profile_photo.png`}
               fill
               alt='Blurry Edge Layer'
               className='object-contain rounded-full'
@@ -28,7 +29,8 @@ const Photo = () => {
         {/* Main image layer */}
         <motion.div className='relative w-full h-full z-20'>
           <Image
-            src={`${basePath}/assets/profile_photo.png`}
+            // src={`${basePath}/assets/profile_photo.png`}
+            src={`/assets/profile_photo.png`}
             priority
             quality={100}
             fill

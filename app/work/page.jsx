@@ -199,10 +199,12 @@ const Work = () => {
                       {/* image */}
                       <div className='relative w-full h-full'>
                         <Image
-                          src={`${basePath}${project.image}`}
+                          // src={`${basePath}${project.image}`}
+                          src={`${project.image}`}
                           alt='project image'
                           fill
                           className='object-fit rounded-md'
+                          unoptimized
                         />
                       </div>
                     </div>
