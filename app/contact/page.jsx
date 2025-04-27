@@ -53,7 +53,7 @@ const Contact = () => {
   const onSubmit = async (data) => {
     try {
       setIsSubmitting(true);
-      const response = await fetch('/api/send-email', {
+      const response = await fetch('/pages/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
