@@ -1,3 +1,4 @@
+'use client';
 import Photo from '@/components/Photo';
 import Social from '@/components/Social';
 import { Button } from '@/components/ui/button';
@@ -9,6 +10,15 @@ import Work from './work/page';
 import Contact from './contact/page';
 
 export default function Home() {
+  function handleDownload() {
+    const link = document.createElement('a');
+    link.href = '/assets/Joey_Liou_Resume.pdf';
+    link.download = 'Joey_Liou_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   return (
     <section className='h-full'>
       <div className='container mx-auto h-full'>
@@ -28,7 +38,8 @@ export default function Home() {
                 variant='outline'
                 size='lg'
                 className='uppercase xl:flex items-center gap-2'
-                // onClick={() => window.open('/assets/joeyliou.pdf', '_blank')}
+                onClick={handleDownload}
+                // onClick={() => window.open('/assets/Joey_Liou_Resume.pdf', '_blank')}
               >
                 <span>Download CV</span>
                 <FiDownload className='text-xl' />
