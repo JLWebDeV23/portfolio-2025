@@ -17,8 +17,7 @@ import QdrantIcon from './qdrantIcon';
 
 const about = {
   title: 'About Me',
-  description:
-    'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, obcaecati architecto! Id facilis numquam temporibus quidem illum.',
+  description: '',
   info: [
     {
       fieldName: 'Name',
@@ -50,8 +49,7 @@ const about = {
 const epxerience = {
   icon: '/asssets/resume/cap.svg',
   title: 'My experience',
-  description:
-    'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, obcaecati architecto! Id facilis numquam temporibus quidem illum.',
+  description: '',
   items: [
     {
       company: 'Knowz Pty Ltd',
@@ -74,8 +72,7 @@ const epxerience = {
 const education = {
   icon: '/asssets/resume/cap.svg',
   title: 'My education',
-  description:
-    'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, obcaecati architecto! Id facilis numquam temporibus quidem illum.',
+  description: '',
   items: [
     {
       institution: 'Queensland University of Technology',
@@ -87,8 +84,7 @@ const education = {
 
 const skills = {
   title: 'My skills',
-  description:
-    'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, obcaecati architecto! Id facilis numquam temporibus quidem illum.',
+  description: '',
   skillLists: [
     {
       icon: <FaHtml5 />,
@@ -271,7 +267,7 @@ const Resume = () => {
               </div>
             </TabsContent>
             {/* about */}
-            <TabsContent value='about' className='w-full text-center xl:texst-left'>
+            <TabsContent value='about' className='w-full text-center xl:text-left'>
               <div className='flex flex-col gap-[30px]'>
                 <h3 className='text-4xl font-bold'>{about.title}</h3>
                 <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{about.description}</p>

@@ -10,21 +10,22 @@ const services = [
     num: '01',
     title: 'Web Development',
     description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, obcaecati architecto! Id facilis numquam temporibus quidem illum.',
+      "I’m a frontend-savvy full-stack developer with a strong focus on building clean, modern, and responsive web applications using React, Vue, Tailwind, and TypeScript. From intuitive Chrome extensions to dynamic dashboards and data-driven UIs, I’ve led the design and implementation of multiple production-grade web apps that prioritize performance, scalability, and user experience. My projects often combine seamless frontend interactivity with robust backend support, enabling real-time features, audio playback, and efficient data workflows. Whether it's a marketing site, internal tool, or a browser-based productivity extension, I deliver polished, user-friendly interfaces with a solid architectural foundation.",
+
     href: '',
   },
   {
     num: '02',
     title: 'Backend Development',
     description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, obcaecati architecto! Id facilis numquam temporibus quidem illum.',
+      "As a backend developer, I specialize in Node.js, Express.js, and cloud-native services like AWS and DynamoDB to create scalable APIs, real-time pipelines, and system integrations. I've designed and migrated backend systems that improved integration efficiency by 20% and built file upload pipelines that reduced latency by 35%. With hands-on experience using PostgreSQL, TimescaleDB, and microservice architecture, I’m comfortable designing backend logic that handles real-world demands, from document processing to authentication using JWT. I build backends that not only work — they scale, adapt, and last.",
     href: '',
   },
   {
     num: '03',
     title: 'AI / LLM',
     description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, obcaecati architecto! Id facilis numquam temporibus quidem illum.',
+      'I bring real-world experience developing AI systems leveraging LLMs, embeddings, RAG architecture, and vector databases like Qdrant. I’ve built multi-model evaluation tools using OpenAI, Claude, Mistral, and Llama, and designed NLP interfaces that generate structured JSON outputs for downstream decision-making. From creating tokenizer visualizations to integrating function calling and system prompts, I’m equipped to build AI features that go beyond chat — grounding output with real data, enhancing UX with thoughtful prompt engineering, and integrating with full-stack applications. I make AI practical, insightful, and ready for production.',
     href: '',
   },
 ];
