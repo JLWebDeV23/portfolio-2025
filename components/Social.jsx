@@ -6,7 +6,7 @@ const socials = [
   { icon: <FaGithub />, path: 'https://github.com/JLWebDeV23' },
   {
     icon: <FaLinkedin />,
-    path: 'https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile',
+    path: 'https://www.linkedin.com/in/joeyliou',
   },
 ];
 
